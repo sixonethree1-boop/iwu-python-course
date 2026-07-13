@@ -191,6 +191,21 @@ print("======================")
 
 ---
 
+**📚 READING ASSIGNMENT — Due Day 2 (Tomorrow)**
+
+**Read:** `handouts/day1_basics.py` — buksan sa VS Code, basahin ang comments, i-run ang code.
+
+**Challenge:** Gumawa ng bagong file `assignment1.py` na:
+1. Mag-ask ng **full name** ng user
+2. Mag-ask ng **favorite OSINT tool** (ex: Facebook, Twitter, Telegram)
+3. I-print ang: `"[Name] specializes in [tool] intelligence."`
+4. I-print kung ilang characters ang name
+5. I-print ang name sa UPPERCASE
+
+**Submit:** Save ang `assignment1.py` at ipasa kinabukasan bago mag-umpisa ang klase.
+
+---
+
 ## DAY 2 (Tue) - Logic & Loops
 
 ### Hour 1: If-Else
@@ -267,10 +282,25 @@ print(result)      # BCD
 
 ### Hour 4: Practice Lab
 Build a program that:
-1. Asks for a word
-2. Counts how many vowels it has
-3. Shifts each letter by 1
-4. Prints original and shifted
+**Exercises:**
+1. Ask user for age, tell if they are senior (60+), adult (18-59), or minor (below 18)
+2. Ask for a number, print all numbers from 1 to that number
+3. Ask for a word, print each letter on a new line
+
+---
+
+**📚 READING ASSIGNMENT — Due Day 3 (Tomorrow)**
+
+**Read:** `handouts/day2_loops.py` — buksan at i-run. Pansinin ang pagkakaiba ng `for` at `while`.
+
+**Challenge:** Gumawa ng `assignment2.py`:
+1. Mag-ask ng **secret message**
+2. Mag-ask ng **shift number** (1-26)
+3. I-loop ang bawat letter at i-shift gamit ang `ord()` at `chr()`
+4. I-print ang **naka-encrypt na mensahe**
+5. I-print ang **original message**
+
+**Submit:** `assignment2.py` kinabukasan.
 
 ---
 
@@ -327,7 +357,25 @@ for s in range(26):
     print(f"Shift {s}: {decrypt(cipher, s)}")
 ```
 
-**Output:** Full working Caesar cipher with encrypt, decrypt, and brute force.
+### Hour 4: ASCII & Unicode Discussion
+**Why ASCII matters for encryption:** Encryption works by manipulating numbers. ASCII lets us convert letters to numbers and back.
+- `ord('A')` = 65
+- `chr(65)` = 'A'
+
+---
+
+**📚 READING ASSIGNMENT — Due Day 4 (Tomorrow)**
+
+**Read:** Review ang Caesar Cipher code sa Day 3 lesson.
+
+**Challenge:** `assignment3.py` — Gawing **mas secure** ang Caesar Cipher:
+1. Mag-ask ng message at shift number
+2. I-encrypt gamit ang Caesar Cipher (capital letters lang)
+3. I-print ang encrypted result
+4. I-decrypt ang result at i-print — dapat bumalik sa original
+5. **Bonus:** Gawing gumagana rin sa lowercase letters
+
+**Submit:** `assignment3.py` kinabukasan.
 
 ---
 
@@ -400,6 +448,21 @@ Build a program with menu:
 6. Exit
 Choice: _
 ```
+
+---
+
+**📚 READING ASSIGNMENT — Due Day 5 (Tomorrow - Final Day)**
+
+**Read:** Review lahat ng codes mula Day 1 hanggang Day 4.
+
+**Challenge:** `assignment4.py` — Pagsamahin ang lahat:
+1. GUI na may **textarea** para sa message
+2. **Entry** para sa key
+3. Buttons: **Encrypt (Caesar)**, **Encrypt (XOR)**, **Decrypt**
+4. Output area
+5. Dark theme (bg black, text white)
+
+**Submit:** `assignment4.py` kinabukasan — final app na ito.
 
 ---
 
