@@ -27,12 +27,14 @@ Hindi recommended ang `winget` kasi hindi lahat ng Windows version ay may `winge
 python --version
 ```
 
-**Windows (via Terminal — using winget kung available):**
+**Windows (via Terminal — using winget):**
 ```powershell
-winget install Python.Python.3.11
+winget install Python.Python
 python --version
 ```
-> ⚠️ **Kung walang winget:** Gamitin ang manual download sa ibaba.
+> `Python.Python` = latest stable version. Huwag lagyan ng specific version number (ex: `Python.Python.3.14.6`) dahil hindi yan ang package name format ng winget.
+
+> ⚠️ **Kung walang winget o hindi mahanap ang package:** Gamitin ang manual download sa ibaba.
 
 **Windows (manual — sureball, gumagana sa lahat):**
 1. Buksan ang browser: `python.org/downloads`
