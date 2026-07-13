@@ -15,29 +15,52 @@ Teach Python in 1 week. Final output: working encryption/decryption desktop app.
 
 ### Hour 0: Setup — Installing Python
 
-**Windows:**
+**Windows (via Command Prompt / PowerShell):**
+
+Hindi recommended ang `winget` kasi hindi lahat ng Windows version ay may `winget`. Gamitin ang manual download:
 1. Puntahan: `python.org/downloads`
 2. I-download ang latest **Python 3.11+** (Windows installer)
 3. **CHECK** ang box: *"Add Python to PATH"* — ito ang pinakamahalaga
 4. Click **Install Now**
-5. I-verify: Open **Command Prompt** (CMD) → i-type:
-```
+5. I-verify:
+```cmd
 python --version
 ```
-Dapat lumabas: `Python 3.11.x`
 
-**Mac:**
-1. I-download ang installer mula `python.org/downloads`
-2. I-install
-3. I-verify: Open **Terminal** → i-type:
+**Windows (via Terminal — using winget kung available):**
+```powershell
+winget install Python.Python.3.11
+python --version
 ```
+
+**Mac (via Terminal):**
+
+**Option A — Homebrew (recommended):**
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew install python@3.11
 python3 --version
 ```
 
-**Linux (Ubuntu):**
+**Option B — Xcode Command Line Tools (built-in, pero luma ang version):**
+```bash
+xcode-select --install
+python3 --version
 ```
+
+**Option C — Manual installer:**
+1. Puntahan: `python.org/downloads`
+2. I-download ang **macOS installer** (64-bit universal2)
+3. I-install
+4. I-verify:
+```bash
+python3 --version
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
 sudo apt update
-sudo apt install python3 python3-pip
+sudo apt install python3 python3-pip -y
 python3 --version
 ```
 
