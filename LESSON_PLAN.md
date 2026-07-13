@@ -32,6 +32,18 @@ python --version
 winget install Python.Python.3.11
 python --version
 ```
+> ⚠️ **Kung walang winget:** Gamitin ang manual download sa ibaba.
+
+**Windows (manual — sureball, gumagana sa lahat):**
+1. Buksan ang browser: `python.org/downloads`
+2. I-click ang **Download Python 3.11.x** (yellow button)
+3. Patakbuhin ang installer
+4. **✅ CHECK** ang *"Add Python to PATH"* (ibaba ng window)
+5. Click **Install Now**
+6. I-verify sa CMD:
+```cmd
+python --version
+```
 
 **Mac (via Terminal):**
 
