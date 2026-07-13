@@ -11,152 +11,183 @@ Teach Python in 1 week. Final output: working encryption/decryption desktop app.
 
 ---
 
-## DAY 1 (Mon) - Foundations
+## DAY 1 (Mon) — Foundations
 
-### Hour 0.5: The Story of Python (15 min)
+### Hour 0: Setup — Installing Python
 
-**Before typing anything - sit down, listen:**
+**Windows:**
+1. Puntahan: `python.org/downloads`
+2. I-download ang latest **Python 3.11+** (Windows installer)
+3. **CHECK** ang box: *"Add Python to PATH"* — ito ang pinakamahalaga
+4. Click **Install Now**
+5. I-verify: Open **Command Prompt** (CMD) → i-type:
+```
+python --version
+```
+Dapat lumabas: `Python 3.11.x`
 
-**Why "Python"?**
-- Creator: **Guido van Rossum** (Netherlands, 1989)
-- He was reading the scripts of **Monty Python's Flying Circus** (a BBC comedy)
-- He wanted a name that was "short, unique, and slightly mysterious"
-- Not named after the snake! The snake logo came AFTER the name.
+**Mac:**
+1. I-download ang installer mula `python.org/downloads`
+2. I-install
+3. I-verify: Open **Terminal** → i-type:
+```
+python3 --version
+```
 
-**The Zen of Python (Easter Egg)**
-Tell students:
-> "Before we write a single line, Python has a poem for you. Type this:"
+**Linux (Ubuntu):**
+```
+sudo apt update
+sudo apt install python3 python3-pip
+python3 --version
+```
 
+### Hour 0.5: IDLE vs IDE — Saan ka magsusulat ng code?
+
+| Tool | Uri | Para sa |
+|---|---|---|
+| **IDLE** | **Integrated DeveLopment Environment** (built-in) | Simpleng testing, beginner-friendly, kasama na ng Python |
+| **VS Code** | **IDE** (by Microsoft) | Professional coding, may extensions, color coding |
+| **PyCharm** | **IDE** (by JetBrains) | Heavy-duty Python development |
+| **Notepad++** | Text editor lang | Walang special features, pang-edit lang |
+
+**Para sa klase natin — VS Code ang gagamitin natin.**
+
+**I-install ang VS Code:**
+1. Puntahan: `code.visualstudio.com`
+2. I-download at i-install
+3. Buksan ang VS Code
+4. I-install ang **Python extension** (Python by Microsoft) — left sidebar, click Extensions icon, search "Python"
+5. Gumawa ng bagong file → Save as `test.py`
+6. I-type: `print("Hello, IWU!")`
+7. I-run: Right-click → **Run Python File in Terminal**
+
+### Hour 1: The Zen of Python
+
+Bago tayo mag-code, basahin muna natin ang **pilosopiya ng Python**. Ito ang gumagabay sa lahat ng Python developers.
+
+Open **Python interpreter** sa terminal:
+```
+python
+```
+
+I-type:
 ```python
 import this
 ```
 
-Show output:
+Lalabas ito:
+
 ```
 Beautiful is better than ugly.
 Explicit is better than implicit.
 Simple is better than complex.
-...
-```
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren't special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+Now is better than never.
+Although never is often better than *right* now.
+If the implementation is hard to explain, it's a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+### Hour 1.5: Your First Python Program
 
-Ask students: *"What does this tell you about Python?"*
-Answer: Python values **readability** and **simplicity** — it was designed to be easy to read.
+Sa VS Code, gumawa ng bagong file: `first.py`
 
-**Why pip vs python -m pip**
-- **pip** = Python's package installer (short for "Pip Installs Packages")
-- But in newer Python (3.14+), typing just `pip` doesn't work because it's not in PATH
-- **`python -m pip`** = "Python, run the pip module" — always works
-- Rule of thumb: always use `python -m pip` (or `py -m pip` on Windows)
-
-**IDE vs IDLE vs VS Code**
-- **IDLE** = Built-in editor (comes with Python). Simple but limited
-- **VS Code** = Professional editor. Has syntax highlighting, debugging, extensions
-- **IDE** = Integrated Development Environment (VS Code, PyCharm, etc.)
-- For this course: **VS Code** recommended
-
-### Hour 1: Setup + Hello, Python
-
-**Step 1: Check Python is installed**
-Open Command Prompt (CMD), type:
-```cmd
-python --version
-```
-
-If you see `Python 3.11+`, you're good.
-
-**Step 2: Open VS Code**
-- Open VS Code
-- Create a new file: `day1.py`
-- Save it in a folder: `C:\IWU_Python\day1.py`
-
-**Step 3: Your first Python program**
+I-type:
 ```python
-# This is a comment - Python ignores this
-# Your first program:
-
+# My first Python program
 print("Hello, IWU!")
 ```
 
-**Step 4: Run it**
-- VS Code: click the "play" button (top right)
-- Or in CMD: `python day1.py`
+**I-run:** Right-click → **Run Python File in Terminal**
 
-**The Zen of Python (run this together)**
+Output: `Hello, IWU!`
+
+**Congratulations.** Unang Python program mo na yan.
+
+### Hour 2: Variables and Data Types
+
+Sa VS Code, gumawa ng bagong file: `day1.py`
+
+**Variables — parang lalagyan ng datos**
+
 ```python
-import this
-```
-
-**Variables:**
-```python
-name = "Juan"     # String (text)
-age = 25           # Integer (whole number)
-height = 5.9       # Float (decimal)
-is_instructor = True  # Boolean (True/False)
-
+# String (text)
+name = "Juan"
 print(name)
+
+# Integer (whole number)  
+age = 25
 print(age)
+
+# Float (decimal)
+height = 5.9
 print(height)
-print(is_instructor)
+
+# Boolean (True/False)
+is_marine = True
+print(is_marine)
 ```
 
-**Data Types:**
+**Data Types activity:** I-type ito isa-isa:
+
 ```python
-text = "Hello"     # <class 'str'>
-number = 10        # <class 'int'>
-decimal = 3.14     # <class 'float'>
-is_ok = True       # <class 'bool'>
-
-print(type(text))
-print(type(number))
-print(type(decimal))
-print(type(is_ok))
+print(type("Hello"))     # <class 'str'>
+print(type(25))          # <class 'int'>  
+print(type(5.9))         # <class 'float'>
+print(type(True))        # <class 'bool'>
 ```
 
-**Exercise:** Print your name, rank, and branch of service.
+**String Operations — importante para sa OSINT data cleaning:**
 
-### Hour 2: Strings
 ```python
-# String operations
-msg = "Information Warfare"
-print(len(msg))        # 19
-print(msg.upper())     # INFORMATION WARFARE
-print(msg.lower())     # information warfare
-print(msg[0])          # I
-print(msg[-1])         # e
-print(msg[0:3])        # Inf
-
-# Input
-name = input("Enter your name: ")
-print("Hello,", name)
+msg = "Information Warfare Unit"
+print(msg.upper())        # INFORMATION WARFARE UNIT
+print(msg.lower())        # information warfare unit
+print(msg.count("a"))     # 2
+print(msg.split())        # ['Information', 'Warfare', 'Unit']
 ```
 
-**Exercise:** Ask user for their name, print it backwards.
+### Hour 3: User Input at Type Conversion
 
-### Hour 3: ASCII & Numbers
 ```python
-# ASCII - how computers store text
-print(ord('A'))   # 65
-print(ord('a'))   # 97
-print(chr(65))    # A
-print(chr(97))    # a
+name = input("Ano pangalan mo? ")
+print("Hello, " + name + "!")
 
-# Math operators
-print(10 + 3)     # 13
-print(10 - 3)     # 7
-print(10 * 3)     # 30
-print(10 / 3)     # 3.33
-print(10 // 3)    # 3 (integer division)
-print(10 % 3)     # 1 (remainder)
+# input() returns STRING — kailangan iconvert
+age = input("Ilang taon ka na? ")
+age_num = int(age)
+next_year = age_num + 1
+print("Next year: " + str(next_year))
 ```
 
-**Exercise:** Ask for a letter, print its ASCII value. Ask for a number, print its character.
+### Hour 4: Hands-on — IWU Profile Card
 
-### Hour 4: Practice Lab
-Build a program that:
-1. Asks user's name
-2. Prints name in reverse
-3. Prints ASCII value of first letter
-4. Prints name in uppercase
+```python
+# IWU Profile Card
+print("=== IWU PROFILE ===")
+name = input("Pangalan: ")
+rank = input("Rank: ")
+years = int(input("Years in service: "))
+expertise = input("Expertise (OSINT/Cyber/Analysis): ")
+
+print("\n===== IWU MEMBER =====")
+print("Name: " + name)
+print("Rank: " + rank)
+print("Years: " + str(years))
+print("Expertise: " + expertise)
+print("Status: " + ("Veteran" if years >= 5 else "Junior"))
+print("======================")
+```
+
+**Day 1 Takeaway:** Print, variables, input, type conversion — foundation ng lahat ng Python tools na gagawin natin this week.
 
 ---
 
